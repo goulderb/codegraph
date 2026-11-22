@@ -12,6 +12,10 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### New Features
+
+- GitHub Actions, Forgejo/Gitea Actions, and GitLab CI workflows now appear in the graph, linking workflows and pipelines to their jobs, `needs`/`extends` dependencies, reusable workflows, local composite actions, included templates, and invoked repository scripts.
+
 
 ## [1.6.4] - 2026-11-20
 

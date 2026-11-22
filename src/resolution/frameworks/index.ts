@@ -38,6 +38,7 @@ import { expoRouterResolver } from './expo-router';
 import { fabricViewResolver } from './fabric';
 import { cicsResolver } from './cics';
 import { terraformResolver } from './terraform';
+import { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
 
 /**
  * All registered framework resolvers
@@ -105,6 +106,9 @@ const FRAMEWORK_RESOLVERS: FrameworkResolver[] = [
   cicsResolver,
   // Terraform / OpenTofu — disambiguate var/local/module/resource refs to same-dir module
   terraformResolver,
+  // CI/CD workflows — GitHub Actions, Forgejo/Gitea Actions, GitLab CI
+  actionsWorkflowResolver,
+  gitlabCiResolver,
 ];
 
 /**
@@ -210,3 +214,4 @@ export { reactNativeBridgeResolver } from './react-native';
 export { expoModulesResolver, expoModulesJsResolver } from './expo-modules';
 export { expoRouterResolver } from './expo-router';
 export { fabricViewResolver } from './fabric';
+export { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
