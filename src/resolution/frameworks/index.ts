@@ -38,6 +38,7 @@ import { expoRouterResolver } from './expo-router';
 import { fabricViewResolver } from './fabric';
 import { cicsResolver } from './cics';
 import { terraformResolver } from './terraform';
+import { kubernetesResolver, helmResolver } from './kubernetes';
 
 /**
  * All registered framework resolvers
@@ -105,6 +106,9 @@ const FRAMEWORK_RESOLVERS: FrameworkResolver[] = [
   cicsResolver,
   // Terraform / OpenTofu — disambiguate var/local/module/resource refs to same-dir module
   terraformResolver,
+  // Kubernetes / Kustomize / Helm — semantic YAML resources, selectors, overlays, charts
+  kubernetesResolver,
+  helmResolver,
 ];
 
 /**
@@ -210,3 +214,4 @@ export { reactNativeBridgeResolver } from './react-native';
 export { expoModulesResolver, expoModulesJsResolver } from './expo-modules';
 export { expoRouterResolver } from './expo-router';
 export { fabricViewResolver } from './fabric';
+export { kubernetesResolver, helmResolver } from './kubernetes';

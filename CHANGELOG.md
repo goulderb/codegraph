@@ -12,6 +12,10 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### New Features
+
+- Kubernetes manifests, Kustomize overlays, and Helm charts now have their resources, selectors, generated configs, and template helpers in the graph, linking Ingresses and Gateway routes to Services, Workloads, ConfigMaps, Secrets, RBAC roles, NetworkPolicies, and cluster-internal Service DNS targets.
+
 
 ## [1.6.4] - 2026-11-20
 
