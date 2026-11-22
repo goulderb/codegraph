@@ -38,6 +38,11 @@ import { expoRouterResolver } from './expo-router';
 import { fabricViewResolver } from './fabric';
 import { cicsResolver } from './cics';
 import { terraformResolver } from './terraform';
+import { kubernetesResolver, helmResolver } from './kubernetes';
+import { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
+import { dockerComposeResolver } from './docker-compose';
+import { openApiResolver } from './openapi';
+import { azurePipelinesResolver } from './azure-pipelines';
 
 /**
  * All registered framework resolvers
@@ -105,6 +110,18 @@ const FRAMEWORK_RESOLVERS: FrameworkResolver[] = [
   cicsResolver,
   // Terraform / OpenTofu — disambiguate var/local/module/resource refs to same-dir module
   terraformResolver,
+  // Kubernetes / Kustomize / Helm — semantic YAML resources, selectors, overlays, charts
+  kubernetesResolver,
+  helmResolver,
+  // CI/CD workflows — GitHub Actions, Forgejo/Gitea Actions, GitLab CI
+  actionsWorkflowResolver,
+  gitlabCiResolver,
+  // Docker Compose — services, depends_on, extends, include, networks, volumes, secrets, configs
+  dockerComposeResolver,
+  // OpenAPI / Swagger — endpoints, $ref schemas/components, and backend route/handler bridging
+  openApiResolver,
+  // Azure DevOps Pipelines — pipelines, stages, jobs/deployments, template includes, scripts
+  azurePipelinesResolver,
 ];
 
 /**
@@ -210,3 +227,8 @@ export { reactNativeBridgeResolver } from './react-native';
 export { expoModulesResolver, expoModulesJsResolver } from './expo-modules';
 export { expoRouterResolver } from './expo-router';
 export { fabricViewResolver } from './fabric';
+export { kubernetesResolver, helmResolver } from './kubernetes';
+export { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
+export { dockerComposeResolver } from './docker-compose';
+export { openApiResolver } from './openapi';
+export { azurePipelinesResolver } from './azure-pipelines';
