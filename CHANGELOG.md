@@ -15,6 +15,7 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### New Features
 
 - Kubernetes manifests, Kustomize overlays, and Helm charts now have their resources, selectors, generated configs, and template helpers in the graph, linking Ingresses and Gateway routes to Services, Workloads, ConfigMaps, Secrets, RBAC roles, NetworkPolicies, and cluster-internal Service DNS targets.
+- GitHub Actions, Forgejo/Gitea Actions, and GitLab CI workflows now appear in the graph, linking workflows and pipelines to their jobs, `needs`/`extends` dependencies, reusable workflows, local composite actions, included templates, and invoked repository scripts.
 
 
 ## [1.6.4] - 2026-11-20

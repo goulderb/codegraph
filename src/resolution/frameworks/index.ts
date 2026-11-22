@@ -39,6 +39,7 @@ import { fabricViewResolver } from './fabric';
 import { cicsResolver } from './cics';
 import { terraformResolver } from './terraform';
 import { kubernetesResolver, helmResolver } from './kubernetes';
+import { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
 
 /**
  * All registered framework resolvers
@@ -109,6 +110,9 @@ const FRAMEWORK_RESOLVERS: FrameworkResolver[] = [
   // Kubernetes / Kustomize / Helm — semantic YAML resources, selectors, overlays, charts
   kubernetesResolver,
   helmResolver,
+  // CI/CD workflows — GitHub Actions, Forgejo/Gitea Actions, GitLab CI
+  actionsWorkflowResolver,
+  gitlabCiResolver,
 ];
 
 /**
@@ -215,3 +219,4 @@ export { expoModulesResolver, expoModulesJsResolver } from './expo-modules';
 export { expoRouterResolver } from './expo-router';
 export { fabricViewResolver } from './fabric';
 export { kubernetesResolver, helmResolver } from './kubernetes';
+export { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
