@@ -40,6 +40,7 @@ import { cicsResolver } from './cics';
 import { terraformResolver } from './terraform';
 import { kubernetesResolver, helmResolver } from './kubernetes';
 import { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
+import { dockerComposeResolver } from './docker-compose';
 
 /**
  * All registered framework resolvers
@@ -113,6 +114,8 @@ const FRAMEWORK_RESOLVERS: FrameworkResolver[] = [
   // CI/CD workflows — GitHub Actions, Forgejo/Gitea Actions, GitLab CI
   actionsWorkflowResolver,
   gitlabCiResolver,
+  // Docker Compose — services, depends_on, extends, include, networks, volumes, secrets, configs
+  dockerComposeResolver,
 ];
 
 /**
@@ -220,3 +223,4 @@ export { expoRouterResolver } from './expo-router';
 export { fabricViewResolver } from './fabric';
 export { kubernetesResolver, helmResolver } from './kubernetes';
 export { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
+export { dockerComposeResolver } from './docker-compose';
