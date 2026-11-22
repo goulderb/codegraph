@@ -18,6 +18,7 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - GitHub Actions, Forgejo/Gitea Actions, and GitLab CI workflows now appear in the graph, linking workflows and pipelines to their jobs, `needs`/`extends` dependencies, reusable workflows, local composite actions, included templates, and invoked repository scripts.
 - Docker Compose files now appear in the graph with their services, networks, volumes, secrets, and configs, linking `depends_on`, `extends`, `include`, and resource mounts across Compose files.
 - OpenAPI 3 and Swagger 2 YAML specifications now appear in the graph with their endpoints, schemas, and components, linking local and cross-file `$ref` references and bridging endpoints to matching backend routes or `operationId` handlers.
+- Azure DevOps Pipelines YAML files now appear in the graph with their pipelines, stages, jobs, deployment jobs, and reusable templates, linking `extends`, stage/job/step/variable `template:` includes, `dependsOn` dependencies, and invoked repository scripts.
 
 
 ## [1.6.4] - 2026-11-20

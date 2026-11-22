@@ -42,6 +42,7 @@ import { kubernetesResolver, helmResolver } from './kubernetes';
 import { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
 import { dockerComposeResolver } from './docker-compose';
 import { openApiResolver } from './openapi';
+import { azurePipelinesResolver } from './azure-pipelines';
 
 /**
  * All registered framework resolvers
@@ -119,6 +120,8 @@ const FRAMEWORK_RESOLVERS: FrameworkResolver[] = [
   dockerComposeResolver,
   // OpenAPI / Swagger — endpoints, $ref schemas/components, and backend route/handler bridging
   openApiResolver,
+  // Azure DevOps Pipelines — pipelines, stages, jobs/deployments, template includes, scripts
+  azurePipelinesResolver,
 ];
 
 /**
@@ -228,3 +231,4 @@ export { kubernetesResolver, helmResolver } from './kubernetes';
 export { actionsWorkflowResolver, gitlabCiResolver } from './ci-workflows';
 export { dockerComposeResolver } from './docker-compose';
 export { openApiResolver } from './openapi';
+export { azurePipelinesResolver } from './azure-pipelines';
