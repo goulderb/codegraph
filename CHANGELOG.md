@@ -12,6 +12,10 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### New Features
+
+- OpenAPI 3 and Swagger 2 YAML specifications now appear in the graph with their endpoints, schemas, and components, linking local and cross-file `$ref` references and bridging endpoints to matching backend routes or `operationId` handlers.
+
 
 ## [1.6.4] - 2026-11-20
 
