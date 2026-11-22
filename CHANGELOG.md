@@ -12,6 +12,10 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### New Features
+
+- Azure DevOps Pipelines YAML files now appear in the graph with their pipelines, stages, jobs, deployment jobs, and reusable templates, linking `extends`, stage/job/step/variable `template:` includes, `dependsOn` dependencies, and invoked repository scripts.
+
 
 ## [1.6.4] - 2026-11-20
 

@@ -38,6 +38,7 @@ import { expoRouterResolver } from './expo-router';
 import { fabricViewResolver } from './fabric';
 import { cicsResolver } from './cics';
 import { terraformResolver } from './terraform';
+import { azurePipelinesResolver } from './azure-pipelines';
 
 /**
  * All registered framework resolvers
@@ -105,6 +106,8 @@ const FRAMEWORK_RESOLVERS: FrameworkResolver[] = [
   cicsResolver,
   // Terraform / OpenTofu — disambiguate var/local/module/resource refs to same-dir module
   terraformResolver,
+  // Azure DevOps Pipelines — pipelines, stages, jobs/deployments, template includes, scripts
+  azurePipelinesResolver,
 ];
 
 /**
@@ -210,3 +213,4 @@ export { reactNativeBridgeResolver } from './react-native';
 export { expoModulesResolver, expoModulesJsResolver } from './expo-modules';
 export { expoRouterResolver } from './expo-router';
 export { fabricViewResolver } from './fabric';
+export { azurePipelinesResolver } from './azure-pipelines';
